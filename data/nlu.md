@@ -339,6 +339,10 @@
 - [least](price:low)
 - [lowest](price:low)
 - [simple](price:mid)
+- [<300](price:low)
+- [300-700](price:mid)
+- [300-700 range](price:mid)
+- [>700](price:high)
 
 ## intent:email
 - ['example@example.com](email)
@@ -423,6 +427,9 @@
 - vegg
 - vegan
 - veg
+
+## synonym:Bangalore
+- bengaluru
 
 ## regex:greet
 - hey[^\s]*
