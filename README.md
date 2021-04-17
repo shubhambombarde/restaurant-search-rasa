@@ -14,3 +14,8 @@ Repo for collaborating on the Rasa Chatbot Assignment
 - Since we are using the free quota from SendGrid, we only have a quota of 100 mails / day
 - Please check Spam Box for recieved mails. 
 - If mails couldn't be delivered, it is possibly due to issue with SendGrid API key which may be expired (free quota).
+
+# Demonstration
+- Demonstration Video Link - https://drive.google.com/file/d/1_GeovQgB9LuxG6ndsKRVF5AjZsfUO7nf/view?usp=sharing
+
+- Screenshot of the recieved mail is saved in /RESULTS/Email via SendGrid.py
