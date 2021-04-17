@@ -77,7 +77,7 @@ class ActionSearchRestaurants(Action):
             res = self.fetch(loc,cuisine,price)
             for restaurant in res.iterrows():
                 restaurant = restaurant[1]
-                response = response + F"Found {restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Address']} with avg cost {restaurant['Average Cost for two']} \n\n"
+                response = response + F"Found {restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Aggregate rating']}  \n\n"
             SlotSet('response', response)
             dispatcher.utter_message('RESPONSE--->'+response+"\n\n\n")
 
@@ -124,7 +124,7 @@ class ActionSendEmail(Action):
 
         TEMP = ZomatoData[(ZomatoData['Cuisines'].apply(lambda x: cuisine.lower() in x.lower())) & (
             ZomatoData['City'].apply(lambda x: loc.lower() in x.lower()))]
-        return TEMP[['Restaurant Name', 'Address',  'Aggregate rating']].sort_values('Aggregate rating',ascending=False).head(5)
+        return TEMP[['Restaurant Name', 'Address',  'Aggregate rating']].sort_values('Aggregate rating',ascending=False).head(10)
 
     def run(self, dispatcher, tracker, domain):
         cities = ['New Delhi', 'Gurgaon', 'Noida', 'Faridabad', 'Allahabad', 'Bhubaneshwar', 'Mangalore', 'Mumbai',
@@ -156,7 +156,7 @@ class ActionSendEmail(Action):
             res = self.fetch(loc, cuisine, price)
             for restaurant in res.iterrows():
                 restaurant = restaurant[1]
-                response = response + F"Found {restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Address']} with avg cost {restaurant['Average Cost for two']} \n\n"
+                response = response + F"Found {restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Aggregate rating']}  \n\n"
             SlotSet('response', response)
 
     def sendmail(self, MailID, res,dispatcher):
@@ -214,8 +214,8 @@ class ActionSendEmail(Action):
             res = self.fetch(loc, cuisine, price)
             for restaurant in res.iterrows():
                 restaurant = restaurant[1]
-                response = response + F"Found {restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Address']} with avg cost {restaurant['Average Cost for two']} \n\n"
-        dispatcher.utter_message(response)
+                response = response + F"Found {restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Aggregate rating']}  \n\n"
+        # dispatcher.utter_message(response)
         MailID = tracker.get_slot('email')
         self.sendmail(MailID, response ,dispatcher)
         return [SlotSet('email', MailID)]
