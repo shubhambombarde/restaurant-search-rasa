@@ -63,8 +63,8 @@
     - slot{"got_all": "yes"}
 * affirm
     - utter_request_email
-* email{"email": "gajulajagadeesh7@gmail.com"}
-    - slot{"email": "gajulajagadeesh7@gmail.com"}
+* email{"email": "mailme.hareshkumar@gmail.com"}
+    - slot{"email": "mailme.hareshkumar@gmail.com"}
     - action_send_email
     - utter_goodbye
     - action_restart
@@ -97,8 +97,8 @@
     - utter_email_prompt
 * affirm
     - utter_request_email
-* email{"email": "gajulajagadeesh7@gmail.com"}
-    - slot{"email": "gajulajagadeesh7@gmail.com"}
+* email{"email": "maime.hareshkumar@gmail.com"}
+    - slot{"email": "maime.hareshkumar@gmail.com"}
     - action_send_email
     - utter_goodbye
     - action_restart
@@ -141,8 +141,8 @@
     - utter_email_prompt
 * affirm
     - utter_request_email
-* email{"email": "srinivas.soma@gmail.com"}
-    - slot{"email": "srinivas.soma@gmail.com"}
+* email{"email": "maime.hareshkumar@gmail.com"}
+    - slot{"email": "maime.hareshkumar@gmail.com"}
     - action_send_email
     - utter_goodbye
     - action_restart
@@ -188,8 +188,8 @@
     - utter_email_prompt
 * affirm
     - utter_request_email
-* email{"email": "srinivas.soma@gmail.com"}
-    - slot{"email": "srinivas.soma@gmail.com"}
+* email{"email": "maime.hareshkumar@gmail.com"}
+    - slot{"email": "maime.hareshkumar@gmail.com"}
     - action_send_email
     - utter_goodbye
     - action_restart
@@ -202,8 +202,8 @@
     - action_search_restaurants
 * goodbye
     - utter_email_prompt
-* email{"email": "vickyviper@protonmail.com"}
-    - slot{"email": "vickyviper@protonmail.com"}
+* email{"email": "maime.hareshkumar@protonmail.com"}
+    - slot{"email": "maime.hareshkumar@protonmail.com"}
     - action_send_email
     - utter_goodbye
     - action_restart
@@ -233,8 +233,8 @@
     - action_search_restaurants
 * restaurant_search
     - utter_request_email
-* email{"email": "gajulajagadeesh7@gmail.com"}
-    - slot{"email": "gajulajagadeesh7@gmail.com"}
+* email{"email": "maime.hareshkumar@gmail.com"}
+    - slot{"email": "maime.hareshkumar@gmail.com"}
     - action_send_email
     - utter_goodbye
     - action_restart
@@ -279,8 +279,8 @@
     - utter_email_prompt
 * affirm
     - utter_request_email
-* email{"email": "venkateshdevilvenky@gmail.com"}
-    - slot{"email": "venkateshdevilvenky@gmail.com"}
+* email{"email": "maime.hareshkumar@gmail.com"}
+    - slot{"email": "maime.hareshkumar@gmail.com"}
     - action_send_email
     - utter_goodbye
     - action_restart
@@ -333,8 +333,8 @@
     - slot{"location": "jalandhar"}
     - action_search_restaurants
     - utter_email_prompt
-* email{"email": "srinivas.soma@gmail.com"}
-    - slot{"email": "srinivas.soma@gmail.com"}
+* email{"email": "maime.hareshkumar@gmail.com"}
+    - slot{"email": "maime.hareshkumar@gmail.com"}
     - action_send_email
     - utter_goodbye
     - action_restart
@@ -348,8 +348,8 @@
     - utter_email_prompt
 * affirm
     - utter_request_email
-* email{"email": "gajulajagadeesh7@gmail.com"}
-    - slot{"email": "gajulajagadeesh7@gmail.com"}
+* email{"email": "maime.hareshkumar@gmail.com"}
+    - slot{"email": "maime.hareshkumar@gmail.com"}
     - action_send_email
     - utter_goodbye
     - action_restart
@@ -377,8 +377,8 @@
     - action_search_restaurants
     - reset_slots
     - utter_email_prompt
-* email{"email": "admin@cpanel.com"}
-    - slot{"email": "admin@cpanel.com"}
+* email{"email": "admin@sample.com"}
+    - slot{"email": "admin@sample.com"}
     - action_send_email
     - reset_slots
     - utter_goodbye
@@ -398,8 +398,8 @@
     - utter_email_prompt
 * affirm
     - utter_request_email
-* email{"email": "emantav@gmail.com"}
-    - slot{"email": "emantav@gmail.com"}
+* email{"email": "maime.hareshkumar@gmail.com"}
+    - slot{"email": "maime.hareshkumar@gmail.com"}
     - action_send_email
     - reset_slots
     - utter_goodbye
@@ -416,8 +416,8 @@
     - utter_email_prompt
 * affirm
     - utter_request_email
-* email{"email": "gajulajagadeesh7@gmail.com"}
-    - slot{"email": "gajulajagadeesh7@gmail.com"}
+* email{"email": "maime.hareshkumar@gmail.com"}
+    - slot{"email": "maime.hareshkumar@gmail.com"}
     - action_send_email
     - reset_slots
     - utter_goodbye
@@ -497,8 +497,8 @@
     - utter_email_prompt
 * affirm
     - utter_request_email
-* email{"email": "gajulajagadeesh7@gmail.com"}
-    - slot{"email": "gajulajagadeesh7@gmail.com"}
+* email{"email": "maime.hareshkumar@gmail.com"}
+    - slot{"email": "maime.hareshkumar@gmail.com"}
     - action_send_email
     - reset_slots
     - utter_goodbye
@@ -515,8 +515,8 @@
     - slot{"location": "bengaluru"}
     - action_search_restaurants
     - utter_email_prompt
-* email{"email": "gajulajadageesh7@gmail.com"}
-    - slot{"email": "gajulajadageesh7@gmail.com"}
+* email{"email": "maime.hareshkumar@gmail.com"}
+    - slot{"email": "maime.hareshkumar@gmail.com"}
     - action_send_email
     - reset_slots
     - utter_goodbye
@@ -603,8 +603,8 @@
     - utter_email_prompt
 * affirm
     - utter_request_email
-* email{"email": "gajulajagadeesh7@gmail.com"}
-    - slot{"email": "gajulajagadeesh7@gmail.com"}
+* email{"email": "maime.hareshkumar@gmail.com"}
+    - slot{"email": "maime.hareshkumar@gmail.com"}
     - action_send_email
     - reset_slots
     - utter_goodbye
@@ -664,8 +664,8 @@
     - utter_email_prompt
 * affirm
     - utter_request_email
-* email{"email": "gajulajagadeesh7@gmail.com"}
-    - slot{"email": "gajulajagadeesh7@gmail.com"}
+* email{"email": "mailme.hareshkumar@gmail.com"}
+    - slot{"email": "mailme.hareshkumar@gmail.com"}
     - action_send_email
     - reset_slots
     - utter_goodbye
