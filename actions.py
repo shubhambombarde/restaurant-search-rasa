@@ -159,7 +159,7 @@ class ActionSendEmail(Action):
                 response = response + F"Found {restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Address']} with avg cost {restaurant['Average Cost for two']} \n\n"
             SlotSet('response', response)
 
-    def sendmail(self, MailID, res):
+    def sendmail(self, MailID, res,dispatcher):
 
         session = smtplib.SMTP('smtp.sendgrid.net', 587)
         session.starttls()
@@ -175,9 +175,9 @@ class ActionSendEmail(Action):
             message = 'From: shubhambombarde4@gmail.com\nSubject: Restaurant Search Results\n\n' + str(text)
             session.sendmail(sender_address, receiver_address, message)
             session.close()
-            print("Mail sent successfully.If you havent received your email ,please check the spam folders as well.")
+            dispatcher.utter_message("Mail sent successfully.If you havent received your email ,please check the spam folders as well.")
         except Exception as e:
-            print("Unable to send email")
+            dispatcher.utter_message("Unable to send email")
             print(e)
 
 
@@ -217,5 +217,5 @@ class ActionSendEmail(Action):
                 response = response + F"Found {restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Address']} with avg cost {restaurant['Average Cost for two']} \n\n"
         dispatcher.utter_message(response)
         MailID = tracker.get_slot('email')
-        self.sendmail(MailID, response)
+        self.sendmail(MailID, response ,dispatcher)
         return [SlotSet('email', MailID)]
