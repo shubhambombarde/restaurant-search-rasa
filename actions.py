@@ -61,7 +61,7 @@ class ActionSearchRestaurants(Action):
         loc = tracker.get_slot('location')
         if loc == None:
             return dispatcher.utter_message('Location got is None')
-        if loc not in cities:
+        if loc.lower() not in [city.lower() for city in cities]:
             dispatcher.utter_message("We don't operate in your location")
             return [AllSlotsReset()]
 
@@ -140,7 +140,7 @@ class ActionSendEmail(Action):
         loc = tracker.get_slot('location')
         if loc == None:
             return dispatcher.utter_message('Location got is None')
-        if loc not in cities:
+        if loc.lower() not in [city.lower() for city in cities]:
             dispatcher.utter_message("We don't operate in your location")
             return [AllSlotsReset()]
 
@@ -198,7 +198,7 @@ class ActionSendEmail(Action):
         loc = tracker.get_slot('location')
         if loc == None:
             return dispatcher.utter_message('Location got is None')
-        if loc not in cities:
+        if loc.lower() not in [city.lower() for city in cities]:
             dispatcher.utter_message("We don't operate in your location")
             return [AllSlotsReset()]
 
