@@ -148,7 +148,6 @@
 - order some food
 - please find me [north indian](cuisine) restaurant in [delhi](location)
 - i want to find restaurant in [pune](location) with [cheapest](price:low) price
-- please find [chinese](cuisine) restaurant in [bengaluru](location) with [low](price) price and email to [gajulajagadeesh7@gmail.com](email)
 - want to eat [mexican](cuisine) food
 - [budget](price:mid) friendly restaurants in [delhi](location)
 - hello bot can restaurants in [delhi](location)
@@ -339,33 +338,26 @@
 - [least](price:low)
 - [lowest](price:low)
 - [simple](price:mid)
-- [<300](price:low)
-- [300-700](price:mid)
-- [300-700 range](price:mid)
-- [>700](price:high)
 
 ## intent:email
 - ['example@example.com](email)
 - myemail [hello@gmail.com](email)
-- to [jagadeesh@gmail.com](email)
-- ping to [vicky@protonmail.com](email)
+- to [mailme.hareshkumar@gmail.com](email)
+- ping to [haresh@protonmail.com](email)
 - push to [admin@india.net](email)
 - [example@yahoomail.com](email)
 - send to [foodie@hotmail.com](email)
-- forward to [srinivas@somemail.com](email)
-- email to [someone@mailme.net](email)
+- forward to [shubam@somemail.com](email)
+- email to [shubam@mailme.net](email)
 - [admins@iiitb.net](email)
 - [cherry@gmail.com](email)
-- [srinivas.soma@gmail.com](email)
-- [cherryjan96@gmail.com](email)
-- [howdy@protonmail.com](email)
-- [gajulajagadeesh7@gmail.com](email)
-- yes send to [vickyviper@protonmail.com](email)
-- forward to [venkateshdevilvenky@gmail.com](email)
-- yes send to [srinivas.soma@gmail.com](email)
-- mail to [admin@cpanel.com](email)
-- [emantav@gmail.com](email)
-- [gajulajagadeesh7@gmail.com](email)
+- [abc.xyz@gmail.com](email)
+- [shubambombarde4@gmail.com](email)
+- yes send to [mailme.hareshkumar@gmail.com](email)
+- forward to [test@gmail.com](email)
+- yes send to [shubambombarde4@gmail.com](email)
+
+
 
 ## synonym:2
 - two
@@ -427,9 +419,6 @@
 - vegg
 - vegan
 - veg
-
-## synonym:Bangalore
-- bengaluru
 
 ## regex:greet
 - hey[^\s]*
