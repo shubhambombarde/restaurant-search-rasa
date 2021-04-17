@@ -46,7 +46,7 @@ class ActionSearchRestaurants(Action):
         #
 
         TEMP = ZomatoData[(ZomatoData['Cuisines'].apply(lambda x: cuisine.lower() in x.lower())) & (ZomatoData['City'].apply(lambda x: loc.lower() in x.lower()))]
-        return TEMP[['Restaurant Name', 'Address', 'Average Cost for two', 'Aggregate rating']].sort_values('Aggregate rating', ascending=False).head(10)
+        return TEMP[['Restaurant Name', 'Address',  'Aggregate rating']].sort_values('Aggregate rating', ascending=False).head(5)
 
     def run(self, dispatcher, tracker, domain):
         cities = ['New Delhi', 'Gurgaon', 'Noida', 'Faridabad', 'Allahabad', 'Bhubaneshwar', 'Mangalore', 'Mumbai',
@@ -124,7 +124,7 @@ class ActionSendEmail(Action):
 
         TEMP = ZomatoData[(ZomatoData['Cuisines'].apply(lambda x: cuisine.lower() in x.lower())) & (
             ZomatoData['City'].apply(lambda x: loc.lower() in x.lower()))]
-        return TEMP[['Restaurant Name', 'Address', 'Average Cost for two', 'Aggregate rating']].sort_values('Aggregate rating',ascending=False).head(10)
+        return TEMP[['Restaurant Name', 'Address',  'Aggregate rating']].sort_values('Aggregate rating',ascending=False).head(5)
 
     def run(self, dispatcher, tracker, domain):
         cities = ['New Delhi', 'Gurgaon', 'Noida', 'Faridabad', 'Allahabad', 'Bhubaneshwar', 'Mangalore', 'Mumbai',
@@ -175,7 +175,7 @@ class ActionSendEmail(Action):
             message = 'From: shubhambombarde4@gmail.com\nSubject: Restaurant Search Results\n\n' + str(text)
             session.sendmail(sender_address, receiver_address, message)
             session.close()
-            print("Mail sent successfully")
+            print("Mail sent successfully.If you havent received your email ,please check the spam folders as well.")
         except Exception as e:
             print("Unable to send email")
             print(e)
