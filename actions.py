@@ -46,7 +46,7 @@ class ActionSearchRestaurants(Action):
         #
 
         TEMP = ZomatoData[(ZomatoData['Cuisines'].apply(lambda x: cuisine.lower() in x.lower())) & (ZomatoData['City'].apply(lambda x: loc.lower() in x.lower()))]
-        return TEMP[['Restaurant Name', 'Address', 'Average Cost for two', 'Aggregate rating']]
+        return TEMP[['Restaurant Name', 'Address', 'Average Cost for two', 'Aggregate rating']].sort_values('Aggregate rating', ascending=False).head(10)
 
     def run(self, dispatcher, tracker, domain):
         cities = ['New Delhi', 'Gurgaon', 'Noida', 'Faridabad', 'Allahabad', 'Bhubaneshwar', 'Mangalore', 'Mumbai',
@@ -124,7 +124,7 @@ class ActionSendEmail(Action):
 
         TEMP = ZomatoData[(ZomatoData['Cuisines'].apply(lambda x: cuisine.lower() in x.lower())) & (
             ZomatoData['City'].apply(lambda x: loc.lower() in x.lower()))]
-        return TEMP[['Restaurant Name', 'Address', 'Average Cost for two', 'Aggregate rating']].sort_values('Aggregate rating',ascending=False)
+        return TEMP[['Restaurant Name', 'Address', 'Average Cost for two', 'Aggregate rating']].sort_values('Aggregate rating',ascending=False).head(10)
 
     def run(self, dispatcher, tracker, domain):
         cities = ['New Delhi', 'Gurgaon', 'Noida', 'Faridabad', 'Allahabad', 'Bhubaneshwar', 'Mangalore', 'Mumbai',
