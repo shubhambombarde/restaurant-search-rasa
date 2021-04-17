@@ -175,7 +175,7 @@ class ActionSendEmail(Action):
             message = 'From: shubhambombarde4@gmail.com\nSubject: Restaurant Search Results\n\n' + str(text)
             session.sendmail(sender_address, receiver_address, message)
             session.close()
-            print("Mail sent successfully")
+            print("Mail sent successfully.If you havent received your email ,please check the spam folders as well.")
         except Exception as e:
             print("Unable to send email")
             print(e)
