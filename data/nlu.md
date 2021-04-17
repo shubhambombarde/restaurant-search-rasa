@@ -358,6 +358,11 @@
 - yes send to [shubambombarde4@gmail.com](email)
 
 
+## synonym:Bangalore
+- Bengaluru
+
+## synonym:Mumbai
+- Bombay
 
 ## synonym:2
 - two
