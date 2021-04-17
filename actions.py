@@ -159,20 +159,26 @@ class ActionSendEmail(Action):
                 response = response + F"Found {restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Address']} with avg cost {restaurant['Average Cost for two']} \n\n"
             SlotSet('response', response)
 
-    def sendmail(self,MailID, res):
+    def sendmail(self, MailID, res):
 
-        session = smtplib.SMTP('smtp.gmail.com', 587)
+        session = smtplib.SMTP('smtp.sendgrid.net', 587)
         session.starttls()
 
         # Credentials are masked for Privacy
-        sender_address  = 'mailme.XXXXX@gmail.com'
-        sender_pwd = 'XXXXXXXX'
-        receiver_address='mailme.XXXXXX@gmail.com'
-        session.login(sender_address, sender_pwd)
-        text = res.as_string()
-        session.sendmail(sender_address, receiver_address, text)
-
-        session.close()
+        try:
+            sender_username = 'apikey'
+            sender_address = 'blogbyai@admin.com'
+            sender_pwd = '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'
+            receiver_address = MailID
+            session.login(sender_username, sender_pwd)
+            text = str(res)
+            message = 'From: shubhambombarde4@gmail.com\nSubject: Restaurant Search Results\n\n' + str(text)
+            session.sendmail(sender_address, receiver_address, message)
+            session.close()
+            print("Mail sent successfully")
+        except Exception as e:
+            print("Unable to send email")
+            print(e)
 
 
     def run(self, dispatcher, tracker, domain):
